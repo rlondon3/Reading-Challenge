@@ -1,0 +1,62 @@
+nav {
+  padding-left: 10px;
+}
+
+li.active {
+  background-color: rgba(135, 133, 250, 0.781) !important;
+}
+div.collapsible-body {
+  background-color: rgb(255, 251, 251);
+}
+ul.collapsible.popout {
+  display: inline-block !important;
+}
+
+#card-img {
+  max-width: 130px;
+}
+#background {
+  background-image: url('img/banner.png');
+}
+
+.icon_style {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 990px) {
+  #table {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 850px) {
+  nav .brand-logo {
+    font-size: 1.5rem;
+  }
+  #book-review {
+    display: flex;
+    flex-direction: column;
+  }
+  #popout {
+    width: 100% !important;
+  }
+  #video {
+    width: 100% !important;
+  }
+}
+@media (max-width: 615px) {
+  nav .brand-logo {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 464px) {
+  nav .brand-logo {
+    font-size: 0.7rem;
+  }
+}
