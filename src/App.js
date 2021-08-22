@@ -26,9 +26,9 @@ class App extends Component {
               <Route path='/books' component={Books} />
               <Route path='/readinglog' component={ReadingLog} />
               <Route path='/login' component={Login} />
-              <Route path='/not-found/' component={NotFound} />
-              <Redirect from='/' to='/not-found/' />
-              <Redirect to='/student' />
+              <Route path='/not-found' component={NotFound} />
+              <Redirect from='/' exact to='/students' />
+              <Redirect to='/not-found' />
             </Switch>
           </div>
         </Router>

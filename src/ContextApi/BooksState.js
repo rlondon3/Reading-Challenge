@@ -15,6 +15,14 @@ const BooksState = (props) => {
     pageSize: 3,
   };
 
+  let nytimesApikey;
+
+  if (process.env.NODE_ENV !== 'prodution') {
+    nytimesApikey = process.env.REACT_APP_NYTIMES_CLIENT_KEY;
+  } else {
+    nytimesApikey = process.env.NYTIMES_CLIENT_KEY;
+  }
+
   const [state, dispatch] = useReducer(BooksReducer, initialState);
 
   //On Page Change
@@ -31,7 +39,7 @@ const BooksState = (props) => {
 
   const getBooks = async () => {
     const res = await axios.get(
-      'https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=skBngFoAACpvwq5eHRZdH6Zg48i0BG1W'
+      `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${nytimesApikey}`
     );
     dispatch({
       type: GET_BOOKS,
@@ -41,7 +49,7 @@ const BooksState = (props) => {
 
   const getRandomBook = async () => {
     const res = await axios.get(
-      'https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=skBngFoAACpvwq5eHRZdH6Zg48i0BG1W'
+      `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${nytimesApikey}`
     );
 
     //One Book
