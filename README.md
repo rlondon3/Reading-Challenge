@@ -1,4 +1,4 @@
 # Reading Challenge
-### [https://alluring-bears.surge.sh/books](Reading Challenge) <br/>
-A simple application envisioned for teachers to assign reading assignments via the NY Times Bestseller API. This application was built in ReactJS and uses the context API.
-A 'fake' student database was built in order to access what would be student data if this site had a custom backend. 
+View the my first React Project Beloew
+### [Reading Challenge](https://alluring-bears.surge.sh/books) <br/>
+**This application is currently being expanding into a full-stack application with user authentication, student search, and book report logging. Please checkback to see how my first React project has been ugraded with a NodeJS backend, unit testing with Mocha, and CI/CD through CircleCi.
